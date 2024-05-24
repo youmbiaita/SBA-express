@@ -9,7 +9,7 @@ const PORT = 3000;
 
 //set view engine ejs
 app.set("view engine", "ejs")
-app.use("/menus", menuRouter)
+app.use("views", menuRouter)
 
 // We use the body-parser middleware FIRST so that
 // we have access to the parsed data within our routes.

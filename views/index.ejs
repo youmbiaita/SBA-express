@@ -8,18 +8,7 @@
 </head>
 <body>
   <h1>Welcome to AFoods Restaurant </h1>
-  <h2>Menu Items</h2>
-  <ul>
-    <% menuItems.forEach(item => { %>
-      <li><%= item.name %> - <%= item.price %></li>
-    <% }) %>
-  </ul>
-  <h2>Create a Menu Item</h2>
-  <form action="/api/menuItems" method="POST">
-    <input type="text" name="name" placeholder="Name">
-    <input type="text" name="description" placeholder="Description">
-    <input type="number" name="price" placeholder="Price">
-    <button type="submit">Create</button>
-  </form>
+ 
+
 </body>
 </html>

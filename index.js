@@ -1,7 +1,15 @@
 const express = require("express");
+const menuRouter = require("./routes/menus");
+const orderRouter = require("./routes/orders");
+const userRouter = require("./routes/users");
 // const bodyParser = require("body=parser")
 const app = express();
 const PORT = 3000;
+
+
+//set view engine ejs
+app.set("view engine", "ejs")
+app.use("/menus", menuRouter)
 
 // We use the body-parser middleware FIRST so that
 // we have access to the parsed data within our routes.
@@ -10,7 +18,7 @@ app.use(express.urlencoded({extended: true}))
 app.use(express.json({extended: true}))
 
 app.get("/", (req,res) =>{
-    res.send("other page")
+    res.render("index.ejs", {text: "World"})
 });
 
 app.get("/users",(req,res)=>{

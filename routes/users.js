@@ -23,7 +23,7 @@ router.get('/:id', (req, res) => {
   res.json(user);
 });
 
-router.put('/:id', (req, res) => {
+router.patch('/:id', (req, res) => {
   const user = users.find(item => item.id === parseInt(req.params.id));
   if (!user) return res.status(404).send('User not found');
 

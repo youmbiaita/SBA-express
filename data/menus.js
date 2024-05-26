@@ -69,8 +69,5 @@ const menus = [
         price: 3.99,
         image: "https://i.ytimg.com/vi/2K-FFs4R0as/maxresdefault.jpg"
     }
-
-
-
 ];
 module.exports = menus;

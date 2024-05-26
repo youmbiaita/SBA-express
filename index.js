@@ -3,6 +3,8 @@ const app = express();
 const bodyParser = require("body-parser");
 const PORT = 5050;
 
+//static file
+app.use(express.static("./views"));
 //routes
 const menus = require("./routes/menus");
 const orders = require("./routes/orders");
@@ -38,9 +40,16 @@ app.get("/", (req, res) => {
   res.render("index.ejs");
 });
 
-app.get("/form", (req, res) => {
-  res.render("form");
-});
+// app.post("/addMenu", (req, res) => {
+//   const m = require("./data/menus");
+//   res.render("index.ejs", {
+//     id: m.length + 1,
+//     name: req.body.name,
+//     description: req.body.description,
+//     price: req.body.price,
+//     image: req.body.image
+//   });
+// });
 
 app.get("/users", (req, res) => {
   res.send("This is users page");

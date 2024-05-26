@@ -1,8 +1,22 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: black;
-  }
-  
-  h1 {
-    color: #333;
-  }
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+}
+
+form {
+  width: 500px;
+  height: 230px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+
+}
+
+form input{
+  height: 30px;
+}

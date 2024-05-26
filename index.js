@@ -41,8 +41,7 @@ app.get("/", (req, res) => {
   res.render("index.ejs");
 });
 
-// app.post("/addMenu", (req, res) => {
-//   const m = require("./data/menus");
+// app.post("/api/menus", (req, res) => {
 //   res.render("index.ejs", {
 //     id: m.length + 1,
 //     name: req.body.name,

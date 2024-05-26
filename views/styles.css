@@ -30,3 +30,11 @@ form {
 form input{
   height: 30px;
 }
+form input[type=submit] {
+  background-color: red;
+  color: white;
+  }
+
+form input[type=submit]:hover {
+background-color: green;
+}

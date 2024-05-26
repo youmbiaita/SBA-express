@@ -41,14 +41,8 @@ app.get("/", (req, res) => {
   res.render("index.ejs");
 });
 
-// app.post("/api/menus", (req, res) => {
-//   res.render("index.ejs", {
-//     id: m.length + 1,
-//     name: req.body.name,
-//     description: req.body.description,
-//     price: req.body.price,
-//     image: req.body.image
-//   });
+// app.post("/", (req, res) => {
+//   res.render("index.ejs");
 // });
 
 app.get("/users", (req, res) => {

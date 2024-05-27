@@ -1,38 +1,45 @@
 # Restaurant API
 
-This is a simple RESTful API for a restaurant application. It includes endpoints for managing menu items, reservations, and orders.
+This is a simple RESTful API for a restaurant application. It includes endpoints for managing menus, orders, and users.
 
 ## Requirements
 
 - Node.js
 - npm
+-express
+-body-parser
+-ejs
+-view engime
+-router
 
 ## Installation
 
 1. Clone the repository
 2. Run `npm install` to install dependencies
 3. Run `node server.js` to start the server
+6. edit package.json
 
-## Endpoints
+## homepage is linked to index.ejs
+-api/menus/addMenu
+- after submit buttom it posts directly on api/menus
 
-### Menu Items
+### Menu
 
-- GET /api/menuItems
-- POST /api/menuItems
-- GET /api/menuItems/:id
-- PUT /api/menuItems/:id
-- DELETE /api/menuItems/:id
+- GET /api/menus
+- POST /api/menus
+- GET /api/menus/:id
+- PUT /api/menus/:id
+- DELETE /api/menus/:id
 
-### Reservations
+### users
 
-- GET /api/reservations
-- POST /api/reservations
-- GET /api/reservations/:id
-- PUT /api/reservations/:id
-- DELETE /api/reservations/:id
+- GET /api/users
+- POST /api/users
+- GET /api/users/:id
+- PUT /api/users/:id
+- DELETE /api/users/:id
 
 ### Orders
-
 - GET /api/orders
 - POST /api/orders
 - GET /api/orders/:id
@@ -53,6 +60,3 @@ This is a simple RESTful API for a restaurant application. It includes endpoints
 
 - CSS for styling the views
 
-## License
-
-MIT

@@ -44,6 +44,7 @@ router.get('/', (req, res) => {
   res.json(filteredMenus);
 });
 
+// post of create bottom of submit in ejs file
 router.post('/addMenu', (req, res) => {
   if(validateMenu(req, res) == null){
     const menu = {

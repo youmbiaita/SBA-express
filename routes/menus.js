@@ -44,7 +44,7 @@ router.get('/', (req, res) => {
   res.json(filteredMenus);
 });
 
-router.post('/', (req, res) => {
+router.post('/addMenu', (req, res) => {
   if(validateMenu(req, res) == null){
     const menu = {
       id: menus.length + 1,

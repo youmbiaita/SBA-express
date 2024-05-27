@@ -1,6 +1,6 @@
 body {
-  background-color: burlywood;
   font-family: Arial, sans-serif;
+  background-image: url("logo2.webp");
 }
 
 h1 {
@@ -22,6 +22,7 @@ form {
   height: 230px;
   margin: auto;
   display: flex;
+  bottom: 0;
   justify-content: space-around;
   flex-direction: column;
 
@@ -37,4 +38,11 @@ form input[type=submit] {
 
 form input[type=submit]:hover {
 background-color: green;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
 }

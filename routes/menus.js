@@ -29,9 +29,19 @@ const validateMenu = (req, res) => {
   return null;
 };
 
-//middleware
+// middleware for getting all menus with optional filtering
 router.get('/', (req, res) => {
-  res.json(menus);
+  const { name, price } = req.query;
+  let filteredMenus = menus;
+
+  if (name) {
+    filteredMenus = filteredMenus.filter(menu => menu.name.toLowerCase().includes(name.toLowerCase()));
+  }
+  if (price) {
+    filteredMenus = filteredMenus.filter(menu => menu.price == price);
+  }
+
+  res.json(filteredMenus);
 });
 
 router.post('/', (req, res) => {

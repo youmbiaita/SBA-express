@@ -41,10 +41,6 @@ app.get("/", (req, res) => {
   res.render("index.ejs");
 });
 
-// app.post("/", (req, res) => {
-//   res.render("index.ejs");
-// });
-
 app.get("/users", (req, res) => {
   res.send("This is users page");
 });

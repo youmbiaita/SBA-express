@@ -31,14 +31,20 @@ const validateMenu = (req, res) => {
 
 // middleware for getting all menus with optional filtering
 router.get('/', (req, res) => {
-  const { name, price } = req.query;
+  const { name, description, price, image } = req.query;
   let filteredMenus = menus;
 
   if (name) {
     filteredMenus = filteredMenus.filter(menu => menu.name.toLowerCase().includes(name.toLowerCase()));
   }
+  if (description) {
+    filteredMenus = filteredMenus.filter(menu => menu.description == description);
+  }
   if (price) {
     filteredMenus = filteredMenus.filter(menu => menu.price == price);
+  }
+  if (image) {
+    filteredMenus = filteredMenus.filter(menu => menu.image == image);
   }
 
   res.json(filteredMenus);
